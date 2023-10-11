@@ -18,7 +18,7 @@ CMD ["node", "app.js"]
 ## CREATE THE IMAGE
 # docker build -t my-express-app .
 
-## RUN THE IMAGE (crate new container)
+## RUN THE IMAGE (create new container)
 # docker run --name express-cli -p 4000:4000 -d my-express-app
 # -p: publish to localhost port
 # -d: detach
