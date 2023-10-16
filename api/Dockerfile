@@ -16,19 +16,3 @@ EXPOSE 4000
 
 # Run at runtime when container begin to run
 CMD ["node", "app.js"]
-
-## CREATE THE IMAGE
-# docker build -t my-express-app .
-
-## RUN THE IMAGE (create new container)
-# docker run --name express-cli -p 4000:4000 -d my-express-app
-# -p: publish to localhost port
-# -d: detach
-
-## START THE CONTAINER (existed)
-# docker start express-cli (names)
-
-## CLI
-# docker images: show all images
-# docker ps: processes, list of running containers
-# stop {image}: stop a container
