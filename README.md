@@ -3,10 +3,11 @@
 ## Create an image
 
 `docker build -t my-express-app`
+`docker build -t my-express-app:v1`
 
 ## Run the image (create new container)
 
-`docker run --name express-cli -p 4000:4000 -d my-express-app`
+`docker run --name [container-name] -p 4000:4000 -d [image]`
 
 -p: publish to localhost port
 
@@ -29,10 +30,19 @@
 ## Common command
 
 - Show all images:
+
   `docker images`
 
 - Processes, list of running containers:
+  
   `docker ps`
 
 - Stop a containers:
-  `stop {image}:`
+  
+  `stop {image}`
+
+- Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
+  
+  `docker system prune [OPTIONS]`
+
+  -a: all
