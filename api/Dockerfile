@@ -2,6 +2,8 @@
 # Pull image from DockerHub repo or our own computer
 FROM node:17-alpine
 
+RUN yarn global add nodemon
+
 # Run every command below start in /app directory
 WORKDIR /app
 
@@ -15,4 +17,4 @@ COPY . .
 EXPOSE 4000
 
 # Run at runtime when container begin to run
-CMD ["node", "app.js"]
+CMD ["yarn", "dev"] 

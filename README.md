@@ -2,8 +2,8 @@
 
 ## Create an image
 
-`docker build -t my-express-app`
-`docker build -t my-express-app:v1`
+`docker build -t my-express-app .`
+`docker build -t my-express-app:v1 .`
 
 ## Run the image (create new container)
 
@@ -13,9 +13,11 @@
 
 -d: detach
 
+--rm: remove or delete container when you don't need it
+
 ## Start the container (existed)
 
-`docker start express-cli (names)`
+`docker start [container-name]`
 
 ## Remove image (not in use)
 
@@ -26,6 +28,8 @@
 ## Remove a container
 
 `docker container rm container-name`
+
+## Volume
 
 ## Common command
 
@@ -46,3 +50,9 @@
   `docker system prune [OPTIONS]`
 
   -a: all
+
+## To keep in mind
+
+-L flag help runnin container in window
+
+`nodemon -L app.js`
